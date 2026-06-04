@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <title>محفظة المصروفات — متتبع المصروفات المتميز</title>
+    <meta
+      name="description"
+      content="Expense Vault is a premium expense tracking application. Record expenses, upload receipts, manage categories, and view beautiful dashboards — powered by your own Firebase project."
+    />
+
+    <!-- Prevent flash of unstyled content: apply theme + layout from localStorage before React loads -->
+    <script>
+      (function () {
+        try {
+          var root = document.documentElement;
+          // Apply theme
+          var VALID_THEMES = ['dark', 'light', 'futuristic', 'luxury'];
+          var savedTheme = localStorage.getItem('expense-vault-theme');
+          var theme = (savedTheme && VALID_THEMES.includes(savedTheme)) ? savedTheme : 'dark';
+          VALID_THEMES.forEach(function(t) { root.classList.remove(t); });
+          root.classList.add(theme);
+          // Apply layout mode
+          var VALID_LAYOUTS = ['compact', 'default', 'spacious'];
+          var savedLayout = localStorage.getItem('expense-vault-layout');
+          var layout = (savedLayout && VALID_LAYOUTS.includes(savedLayout)) ? savedLayout : 'default';
+          root.setAttribute('data-layout', layout);
+        } catch (_) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-gd_0FUTf.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DpqGEVWB.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
